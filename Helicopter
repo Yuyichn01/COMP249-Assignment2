@@ -2,62 +2,75 @@ package secondPackage;
 
 import firstPackage.Airplane;
 
-public class Helicopter extends Airplane {
+public class Helicopter extends firstPackage.Airplane {
+	//Number of cylinders of helicopter
 	public int noOfCylinders;
+	//Creation year of helicopter
 	public int creationYear;
+	//Passenger capacity of helicopter
 	public int passengerCapacity;
 	
+	//default constructor
 	public Helicopter() {
 		this.noOfCylinders = 0;
 		this.creationYear = 0;
 		this.passengerCapacity = 0;
 	}
 	
+	//copy constructor
 	public Helicopter(Helicopter helicopter) {
 		this.noOfCylinders = helicopter.noOfCylinders;
 		this.creationYear = helicopter.creationYear;
 		this.passengerCapacity = helicopter.passengerCapacity;
 	}
 	
+	//parameter constructor
 	public Helicopter(int nOCylinders, int cYear, int pCapacity) {
 		this.noOfCylinders = nOCylinders;
 		this.creationYear = cYear;
 		this.passengerCapacity = pCapacity;
 	}
 	
+	//getter of noOfCylinders
 	public int getNoOfCylinders() {
 		return this.noOfCylinders;
 	}
 	
+	//getter of creationYear
 	public int getCreationYear() {
 		return this.creationYear;
 	}
 	
+	//getter of passengerCapacity
 	public int getPassengerCapacity() {
 		return this.passengerCapacity;
 	}
 	
+	//setter of noOfCylinders
 	public void setNoOfCylinders(int nOCylinders) {
 		this.noOfCylinders = nOCylinders;
 	}
 	
+	//setter of creationYear
 	public void setCreationYear(int cYear) {
 		this.creationYear = cYear;
 	}
 	
+	//setter of passengerCapacity
 	public void setPassengerCapacity(int pCapacity) {
 		this.passengerCapacity = pCapacity;
 	}
 	
+	//toString method
 	public String toString() {
 		return ("This Helicopter is manufacutured by " + super.Brand + " in " + this.creationYear 
 				+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer. "
 				+ "It has " + this.noOfCylinders + " cylinders, and passenger capacity is " + this.passengerCapacity);
 	}
 	
-	public boolean equals(int nOCylinders, int cYear, int pCapacity) {
-		if (this.noOfCylinders==nOCylinders && this.creationYear==cYear && this.passengerCapacity==pCapacity)
-			return true;
-		else return false;
+	//equals method
+	public boolean equals(Helicopter helicopter) {
+		return (super.equals(helicopter) && this.equals(helicopter));
 	}
 }
+
