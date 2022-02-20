@@ -1,0 +1,39 @@
+package secondPackage;
+
+
+public class Quadcopter extends Helicopter {
+	public int maxFlyingSpeed;
+	
+	public Quadcopter() {
+		maxFlyingSpeed = 0;
+	}
+	
+	public Quadcopter(Quadcopter quadcopter) {
+		this.maxFlyingSpeed = quadcopter.maxFlyingSpeed;
+	}
+	
+	public Quadcopter(int mFSpeed) {
+		this.maxFlyingSpeed = mFSpeed;
+	}
+	
+	public int getNoOfRotors() {
+		return this.maxFlyingSpeed;
+	}
+	
+	public void setNoOfRotors(int mFSpeed) {
+		this.maxFlyingSpeed = mFSpeed;
+	}
+	
+	public String toString() {
+		return ("This Helicopter is manufacutured by " + super.Brand + " in " + super.creationYear 
+		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer, and its max flying speed is "
+		+ this.maxFlyingSpeed + "It has " + super.noOfCylinders+ " cylinders, and passenger capacity is " 
+		+ super.passengerCapacity);
+	}
+	
+	public boolean equals(int mFSpeed) {
+		if (this.maxFlyingSpeed==mFSpeed)
+			return true;
+		else return false;
+	}
+}
