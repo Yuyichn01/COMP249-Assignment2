@@ -1,0 +1,60 @@
+package firstPackage;
+
+public class Airplane {
+	public String Brand;
+	public double price;
+	public int horsepower;
+	
+	public Airplane() {
+		this.Brand = "";
+		this.price = 0.0;
+		this.horsepower = 0;
+	}
+	
+	public Airplane(Airplane airplane) {
+		this.Brand = airplane.Brand;
+		this.price = airplane.price;
+		this.horsepower = airplane.horsepower;
+	}
+	
+	public Airplane(String B, double p, int h) {
+		this.Brand = B;
+		this.price = p;
+		this.horsepower = h;
+	}
+	
+	public String getBrand() {
+		return this.Brand;
+	}
+	
+	public double getPrice() {
+		return this.price;
+	}
+	
+	public int getHorsepower() {
+		return this.horsepower;
+	}
+	
+	public void setBrand(String B) {
+		this.Brand = B;
+	}
+	
+	public void setPrice(double p) {
+		this.price = p;
+	}
+	
+	public void setHorsepower(int h) {
+		this.horsepower = h;
+	}
+	
+	public String toString() {
+		return ("This Airplane is manufacutured by " + this.Brand + ". It costs $" 
+				+ this.price + " with a " + this.horsepower + " horsepwoer");
+	}
+	
+	public boolean equals(String B, double p, int h) {
+		if (this.Brand.equals(B) && this.price==p && this.horsepower==h)
+			return true;
+		else return false;
+	}
+}
