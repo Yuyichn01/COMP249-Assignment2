@@ -2,29 +2,36 @@ package thirdPackage;
 
 import secondPackage.Helicopter;
 
-public class Multirotor extends Helicopter {
+public class Multirotor extends secondPackage.Helicopter {
+	//Number of rotors of multirotor
 	public int noOfRotors;
 	
+	//default constructor
 	public Multirotor() {
 		noOfRotors = 0;
 	}
 	
+	//copy constructor
 	public Multirotor(Multirotor multirotor) {
 		this.noOfRotors = multirotor.noOfRotors;
 	}
 	
+	//parameter constructor
 	public Multirotor(int nORotors) {
 		this.noOfRotors = nORotors;
 	}
 	
+	//getter of noOfRotors
 	public int getNoOfRotors() {
 		return this.noOfRotors;
 	}
 	
+	//setter of noOfRotors
 	public void setNoOfRotors(int nORotors) {
 		this.noOfRotors = nORotors;
 	}
 	
+	//toString method
 	public String toString() {
 		return ("This Helicopter is manufacutured by " + super.Brand + " in " + super.creationYear 
 		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer. "
@@ -32,9 +39,8 @@ public class Multirotor extends Helicopter {
 		+ super.passengerCapacity);
 	}
 	
-	public boolean equals(int nORotors) {
-		if (this.noOfRotors==nORotors)
-			return true;
-		else return false;
+	//equals method
+	public boolean equals(Multirotor multirotor) {
+		return (super.equals(multirotor) && this.equals(multirotor));	
 	}
 }
