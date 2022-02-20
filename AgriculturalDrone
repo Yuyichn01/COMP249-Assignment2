@@ -19,21 +19,19 @@ public class AgriculturalDrone extends UAV {
 
 	// The parameter constructor
 	public AgriculturalDrone(int carryCapacity, String brand) {
-				
-				this.brand = brand;
 
-				
-				this.carryCapacity = carryCapacity;
-			}
+		this.brand = brand;
+
+		this.carryCapacity = carryCapacity;
+	}
 
 	// The copy constructor
 	public AgriculturalDrone(AgriculturalDrone agDrone) {
-				
-				this.brand = agDrone.brand;
 
-				
-				this.carryCapacity = agDrone.carryCapacity;
-			}
+		this.brand = agDrone.brand;
+
+		this.carryCapacity = agDrone.carryCapacity;
+	}
 
 	// Getter method of brand
 	public String getBrand() {
@@ -57,7 +55,14 @@ public class AgriculturalDrone extends UAV {
 
 	// toString method
 	public String toString(AgriculturalDrone agDrone) {
-		return "The band of this AgriculturalDrone is " + agDrone.brand + " and the carryCapacity of this AgriculturalDrone is " + agDrone.carryCapacity;
+		return "The band of this AgriculturalDrone is " + agDrone.brand
+				+ " and the carryCapacity of this AgriculturalDrone is " + agDrone.carryCapacity;
+	}
+
+	// equals method
+	public boolean equals(MAV mav, UAV uav, AgriculturalDrone agdrone) {
+		return (super.equals(mav) && super.equals(uav) && super.equals(agdrone));
 	}
 
 }
+
