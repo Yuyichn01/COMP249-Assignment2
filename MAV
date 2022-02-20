@@ -2,65 +2,69 @@ package fifthPackage;
 
 import fourthPackage.UAV;
 
-public class MAV extends UAV{
+public class MAV extends UAV {
 	// The model of MAV
 	public String model;
-	
-	//  The size of MAV
+
+	// The size of MAV
 	public double size;
-	
-	// The default constructor 
-		public MAV() {
-			// Initialize the size to 0
-			this.size = 0;
 
-			// Initialize the model
-			this.model = " ";
-		}
+	// The default constructor
+	public MAV() {
+		// Initialize the size to 0
+		this.size = 0;
 
-		// The parameter constructor
-		public MAV(double size, String model) {
-			// Assign the size value
-			this.size = size;
+		// Initialize the model
+		this.model = " ";
+	}
 
-			// Assign the model value
-			this.model = model;
-		}
+	// The parameter constructor
+	public MAV(double size, String model) {
+		// Assign the size value
+		this.size = size;
 
-		// The copy constructor
-		public MAV(MAV mav) {
-			// Copy the size value
-			this.size = mav.size;
+		// Assign the model value
+		this.model = model;
+	}
 
-			// Copy the model value
-			this.model = mav.model;
-		}
+	// The copy constructor
+	public MAV(MAV mav) {
+		// Copy the size value
+		this.size = mav.size;
 
-		// Getter method of size
-		public double getSize() {
-			return this.size;
-		}
+		// Copy the model value
+		this.model = mav.model;
+	}
 
-		// Getter method of model
-		public String getModel() {
-			return this.model;
-		}
+	// Getter method of size
+	public double getSize() {
+		return this.size;
+	}
 
-		// Setter method of size
-		public void setSize(double size) {
-			this.size = size;
-		}
+	// Getter method of model
+	public String getModel() {
+		return this.model;
+	}
 
-		// Setter method of model
-		public void setModel(String model) {
-			this.model = model;
-		}
-		
-		//toString method
-		public String toString(MAV mav) {
-			return "The model of this MAV is " + mav.model + " and the size of this MAV is " + mav.size;
-		}
+	// Setter method of size
+	public void setSize(double size) {
+		this.size = size;
+	}
 
-	
+	// Setter method of model
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	// toString method
+	public String toString(MAV mav) {
+		return "The model of this MAV is " + mav.model + " and the size of this MAV is " + mav.size;
+	}
+
+	// equals method
+	public boolean equals(MAV mav, UAV uav, AgriculturalDrone agdrone) {
+		return (super.equals(mav) && super.equals(uav) && super.equals(agdrone));
+	}
 
 }
+
