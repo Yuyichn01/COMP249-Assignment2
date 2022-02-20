@@ -1,0 +1,40 @@
+package thirdPackage;
+
+import secondPackage.Helicopter;
+
+public class Multirotor extends Helicopter {
+	public int noOfRotors;
+	
+	public Multirotor() {
+		noOfRotors = 0;
+	}
+	
+	public Multirotor(Multirotor multirotor) {
+		this.noOfRotors = multirotor.noOfRotors;
+	}
+	
+	public Multirotor(int nORotors) {
+		this.noOfRotors = nORotors;
+	}
+	
+	public int getNoOfRotors() {
+		return this.noOfRotors;
+	}
+	
+	public void setNoOfRotors(int nORotors) {
+		this.noOfRotors = nORotors;
+	}
+	
+	public String toString() {
+		return ("This Helicopter is manufacutured by " + super.Brand + " in " + super.creationYear 
+		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer. "
+		+ "It has " + super.noOfCylinders + " cylinders and " + this.noOfRotors + " rotors, and passenger capacity is "
+		+ super.passengerCapacity);
+	}
+	
+	public boolean equals(int nORotors) {
+		if (this.noOfRotors==nORotors)
+			return true;
+		else return false;
+	}
+}
