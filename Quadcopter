@@ -1,29 +1,35 @@
 package secondPackage;
 
-
 public class Quadcopter extends Helicopter {
+	//Max flying speed of quadcopter
 	public int maxFlyingSpeed;
 	
+	//default constructor
 	public Quadcopter() {
 		maxFlyingSpeed = 0;
 	}
 	
+	//copy constructor
 	public Quadcopter(Quadcopter quadcopter) {
 		this.maxFlyingSpeed = quadcopter.maxFlyingSpeed;
 	}
 	
+	//parameter constructor
 	public Quadcopter(int mFSpeed) {
 		this.maxFlyingSpeed = mFSpeed;
 	}
 	
-	public int getNoOfRotors() {
+	//getter of maxFlyingSpeed
+	public int getMaxFlyingSpeed() {
 		return this.maxFlyingSpeed;
 	}
 	
-	public void setNoOfRotors(int mFSpeed) {
+	//setter of maxFlyingSpeed
+	public void setMaxFlyingSpeed(int mFSpeed) {
 		this.maxFlyingSpeed = mFSpeed;
 	}
 	
+	//toString method
 	public String toString() {
 		return ("This Helicopter is manufacutured by " + super.Brand + " in " + super.creationYear 
 		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer, and its max flying speed is "
@@ -31,9 +37,8 @@ public class Quadcopter extends Helicopter {
 		+ super.passengerCapacity);
 	}
 	
-	public boolean equals(int mFSpeed) {
-		if (this.maxFlyingSpeed==mFSpeed)
-			return true;
-		else return false;
+	//equals method
+	public boolean equals(Quadcopter quadcopter) {
+		return (super.equals(quadcopter) && this.equals(quadcopter));
 	}
 }
