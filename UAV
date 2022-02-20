@@ -1,0 +1,62 @@
+package fourthPackage;
+
+public class UAV {
+	// The weight of the UAV
+	public double weight;
+
+	// The price of the UAV
+	public double price;
+
+	// The default constructor
+	public UAV() {
+		// Initialize the weight to 0
+		this.weight = 0;
+
+		// Initialize the price to 0
+		this.price = 0;
+	}
+
+	// The parameter constructor
+	public UAV(double weight, double price) {
+		// Assign the price value
+		this.price = price;
+
+		// Assign the weight value
+		this.weight = weight;
+	}
+
+	// The copy constructor
+	public UAV(UAV uav) {
+		// Copy the price value
+		this.price = uav.price;
+
+		// Copy the weight value
+		this.weight = uav.weight;
+	}
+
+	// Getter method of weight
+	public double getWeight() {
+		return this.weight;
+	}
+
+	// Getter method of price
+	public double getPrice() {
+		return this.price;
+	}
+
+	// Setter method of weight
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	// Setter method of price
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	//toString method
+	public String toString(UAV uav) {
+		return "The weight of this UAV is " + uav.weight + "and the price of this UAV is " + uav.price;
+	}
+
+}
