@@ -1,5 +1,8 @@
 package fourthPackage;
 
+import fifthPackage.AgriculturalDrone;
+import fifthPackage.MAV;
+
 public class UAV {
 	// The weight of the UAV
 	public double weight;
@@ -53,10 +56,15 @@ public class UAV {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	//toString method
+
+	// toString method
 	public String toString(UAV uav) {
 		return "The weight of this UAV is " + uav.weight + "and the price of this UAV is " + uav.price;
+	}
+
+	// equals method
+	public boolean equals(MAV mav, UAV uav, AgriculturalDrone agdrone) {
+		return (super.equals(mav) && super.equals(uav) && super.equals(agdrone));
 	}
 
 }
