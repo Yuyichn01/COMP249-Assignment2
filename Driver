@@ -65,23 +65,23 @@ public class Driver {
 
 		// display choice
 		for (int i = 0; i <= 4; i++) {
-			helicopter[i].toString();
+			System.out.println(helicopter[i].toString());
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			quadcopter[i].toString();
+			System.out.println(quadcopter[i].toString());
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			multirotor[i].toString();
+			System.out.println(multirotor[i].toString());
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			mav[i].toString();
+			System.out.println(mav[i].toString());
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			agriculturalDrone[i].toString();
+			System.out.println(agriculturalDrone[i].toString());
 		}
 
 	}
@@ -98,7 +98,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 28 || Num >= 4);
+		} while (Num < 4 || Num > 28);
 
 		return Num;
 	}
@@ -111,7 +111,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 6 || Num >= 1);
+		} while (Num <= 1 || Num >= 6);
 
 		switch (Num) {
 		case 1:
@@ -143,7 +143,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 4 || Num >= 2);
+		} while (Num <= 2 || Num >= 4);
 		Num = Num * 10000000;
 		return Num;
 	}
@@ -155,7 +155,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num == 1 || Num == 2);
+		} while (Num == 2 || Num == 1);
 		Num = Num * 1000;
 		return Num;
 	}
@@ -167,7 +167,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 16 || Num >= 10);
+		} while (Num <= 10 || Num >= 16);
 
 		return Num;
 	}
@@ -179,7 +179,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 2022 || Num >= 1942);
+		} while (Num <= 1942 || Num >= 2022);
 
 		return Num;
 	}
@@ -191,7 +191,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 400 || Num >= 250);
+		} while (Num <= 250 || Num >= 400);
 
 		return Num;
 	}
@@ -203,7 +203,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num == 3 || Num == 4 || Num == 6 || Num == 8);
+		} while (Num != 3 || Num != 4 || Num != 6 || Num != 8);
 
 		return Num;
 	}
@@ -211,12 +211,12 @@ public class Driver {
 	// generate the model
 	public static String model() {
 		int Num;
-		String string = null;
+		String string = " ";
 		// a do while statement to select only number laid between 1-6
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num == 1 || Num == 2 || Num == 3);
+		} while (Num != 1 || Num != 2 || Num != 3);
 
 		switch (Num) {
 		case 1:
@@ -240,7 +240,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num =  (Math.random());
-		} while (Num <= 4000.0 || Num >= 20000.0);
+		} while (Num <= 20000.0 || Num >= 3000.0);
 		return Num;
 	}
 
@@ -251,7 +251,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (Math.random());
-		} while (Num <= 0.08 || Num >= 0.02);
+		} while (Num <= 0.02 || Num >= 0.08);
 		return Num;
 	}
 
@@ -262,7 +262,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (Math.random());
-		} while (Num <= 1.2 || Num >=0.5);
+		} while (Num <= 0.5 || Num >=1.2);
 		return Num;
 	}
 
@@ -274,7 +274,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 3 || Num >= 1);
+		} while (Num <= 2 || Num >= 3);
 		switch (Num) {
 		case 1:
 			string = "DJI";
@@ -296,9 +296,8 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 80 || Num >= 30);
+		} while (Num <= 30 || Num >= 80);
 		return Num;
 	}
 
 }
-
