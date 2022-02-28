@@ -19,7 +19,6 @@ public class Helicopter extends firstPackage.Airplane {
 	
 	//copy constructor
 	public Helicopter(Helicopter helicopter) {
-		super(helicopter.Brand, helicopter.price, helicopter.horsepower);
 		this.noOfCylinders = helicopter.noOfCylinders;
 		this.creationYear = helicopter.creationYear;
 		this.passengerCapacity = helicopter.passengerCapacity;
@@ -74,4 +73,3 @@ public class Helicopter extends firstPackage.Airplane {
 		return (super.equals(helicopter) && this.equals(helicopter));
 	}
 }
-
