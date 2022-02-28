@@ -10,7 +10,7 @@ public class Airplane {
 	
 	//default constructor
 	public Airplane() {
-		this.Brand = "";
+		this.Brand = " ";
 		this.price = 0.0;
 		this.horsepower = 0;
 	}
@@ -70,4 +70,3 @@ public class Airplane {
 		return (this.equals(airplane));
 	}
 }
-
