@@ -58,7 +58,315 @@ public class Driver {
 			agriculturalDrone[i].setCarryCapacity(capacity());
 			agriculturalDrone[i].setPrice(dronePrice());
 			agriculturalDrone[i].setWeight(weight());
+		}package driver;
+
+import firstPackage.Airplane;
+import secondPackage.*;
+import thirdPackage.Multirotor;
+import fourthPackage.UAV;
+import fifthPackage.*;
+import java.util.Scanner;
+
+public class Driver {
+	public static void main(String[] args) {
+
+		// create 5 helicopters, quadcopters and multirotor, 8 MAV and agricultural
+		Helicopter[] helicopter = new Helicopter[5];
+		Quadcopter[] quadcopter = new Quadcopter[5];
+		Multirotor[] multirotor = new Multirotor[5];
+		MAV[] mav = new MAV[8];
+		AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[8];
+
+		// create 5 Helicopter
+		for (int i = 0; i <= 4; i++) {
+			helicopter[i] = new Helicopter();
+			helicopter[i].setNoOfCylinders(Cylinder());
+			helicopter[i].setBrand(HBrand());
+			helicopter[i].setPrice(Price());
+			helicopter[i].setHorsepower(horsePower());
+			helicopter[i].setPassengerCapacity(passenger());
+			helicopter[i].setCreationYear(year());
 		}
+		// create 5 quadcopter
+		for (int i = 0; i <= 4; i++) {
+			quadcopter[i] = new Quadcopter();
+			quadcopter[i].setNoOfCylinders(Cylinder());
+			quadcopter[i].setBrand(HBrand());
+			quadcopter[i].setPrice(Price());
+			quadcopter[i].setMaxFlyingSpeed(maxSpeed());
+			quadcopter[i].setPassengerCapacity(passenger());
+			quadcopter[i].setCreationYear(year());
+		}
+		// create 5 mutirator
+		for (int i = 0; i <= 4; i++) {
+			multirotor[i] = new Multirotor();
+			multirotor[i].setNoOfCylinders(Cylinder());
+			multirotor[i].setBrand(HBrand());
+			multirotor[i].setPrice(Price());
+			multirotor[i].setHorsepower(horsePower());
+			multirotor[i].setPassengerCapacity(passenger());
+			multirotor[i].setCreationYear(year());
+			multirotor[i].setNoOfRotors(rotors());
+		}
+		// create 8 MAV
+		for (int i = 0; i <= 7; i++) {
+			mav[i] = new MAV();
+			mav[i].setModel(model());
+			mav[i].setPrice(dronePrice());
+			mav[i].setSize(size());
+			mav[i].setSize(weight());
+		}
+		// create 8 agricultural drone
+		for (int i = 0; i <= 7; i++) {
+			agriculturalDrone[i] = new AgriculturalDrone();
+			agriculturalDrone[i].setBrand(AGDBrand());
+			agriculturalDrone[i].setCarryCapacity(capacity());
+			agriculturalDrone[i].setPrice(dronePrice());
+			agriculturalDrone[i].setWeight(weight());
+		}
+
+		// display welcome message
+		System.out.println("welcome to our shop");
+
+		// display choice
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(helicopter[i].toString());
+		}
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(quadcopter[i].toString());
+		}
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(multirotor[i].toString());
+		}
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(mav[i].toString());
+		}
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println(agriculturalDrone[i].toString());
+		}
+
+	}
+
+	// A static method that accept any array of flying objects as a parameter
+	public static void findLeastAndMostExpensiveUAV() {
+
+	}
+
+	// generate the number of cylinder
+	public static int Cylinder() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num < 4 || Num > 28);
+		return Num;
+	}
+
+	// generate the brand
+	public static String HBrand() {
+		int Num;
+		String string = null;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 6);
+
+		switch (Num) {
+		case 1:
+			string = "Mil(CCCP)";
+			break;
+		case 2:
+			string = "中国航空工业集团";
+			break;
+		case 3:
+			string = "Lockheed Martin";
+			break;
+		case 4:
+			string = "Air Bus";
+			break;
+		case 5:
+			string = "Boeing";
+			break;
+		case 6:
+			string = "DENEL AVIATION";
+			break;
+		}
+		return string;
+	}
+
+	// generate the power
+	public static double Price() {
+		double Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (Math.random() * 10);
+		} while (Num < 20000000 || Num > 40000000);
+
+		return Num;
+	}
+
+	// generate the horse power
+	public static int horsePower() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num != 2 || Num != 1);
+		Num = Num * 1000;
+		return Num;
+	}
+
+	// generate the passenger
+	public static int passenger() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 100);
+		} while (Num < 10 || Num > 16);
+
+		return Num;
+	}
+
+	// generate the year
+	public static int year() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10000);
+		} while (Num < 1942 || Num > 2022);
+
+		return Num;
+	}
+
+	// generate the max speed
+	public static int maxSpeed() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 1000);
+		} while (Num < 250 || Num > 400);
+
+		return Num;
+	}
+
+	// generate the rotors
+	public static int rotors() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num != 3 || Num != 4 || Num != 6 || Num != 8);
+
+		return Num;
+	}
+
+	// generate the model
+	public static String model() {
+		int Num;
+		String string = " ";
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num != 1 || Num != 2 || Num != 3);
+
+		switch (Num) {
+		case 1:
+			string = "Military";
+			break;
+		case 2:
+			string = "Business";
+			break;
+		case 3:
+			string = "Civil";
+			break;
+		}
+		return string;
+
+	}
+
+	// generate the drone price
+	public static double dronePrice() {
+		double Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (Math.random() * 10000);
+		} while (Num < 20000 || Num > 10000);
+		return Num;
+	}
+
+	// generate the size of drone
+	public static double size() {
+		double Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (Math.random() * 0.1);
+		} while (Num < 0.02 || Num > 0.08);
+		return Num;
+	}
+
+	// generate the weight of drone
+	public static double weight() {
+		double Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (Math.random());
+		} while (Num < 0.50 || Num > 0.90);
+		return Num;
+	}
+
+	// generate the weight of drone
+	public static String AGDBrand() {
+		int Num;
+		String string = "";
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num < 2 || Num > 3);
+		switch (Num) {
+		case 1:
+			string = "DJI";
+			break;
+		case 2:
+			string = "极飞";
+			break;
+		case 3:
+			string = "Mitsubish";
+			break;
+		}
+		return string;
+	}
+
+	// generate capacity of agriculture drone
+	public static int capacity() {
+		int Num;
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 100);
+		} while (Num < 30 || Num > 80);
+		return Num;
+
+	}
+
+}
+
 
 		// display welcome message
 		System.out.println("welcome to our shop");
