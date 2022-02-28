@@ -302,5 +302,15 @@ public class Driver {
 		return Num;
 
 	}
+	
+	// a flipDice method to determine the number between 1-6
+	public static void flipDice() {
+		// a do while statement to select only number laid between 1-6
+		do {
+			// assign the random number value to diceNumber value
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 6);
+
+	}
 
 }
