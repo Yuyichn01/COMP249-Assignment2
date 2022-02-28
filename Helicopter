@@ -1,14 +1,12 @@
 package secondPackage;
 
-import firstPackage.Airplane;
-
 public class Helicopter extends firstPackage.Airplane {
 	//Number of cylinders of helicopter
-	public int noOfCylinders;
+	public int noOfCylinders = 0;
 	//Creation year of helicopter
-	public int creationYear;
+	public int creationYear = 0;
 	//Passenger capacity of helicopter
-	public int passengerCapacity;
+	public int passengerCapacity = 0;
 	
 	//default constructor
 	public Helicopter() {
@@ -70,6 +68,6 @@ public class Helicopter extends firstPackage.Airplane {
 	
 	//equals method
 	public boolean equals(Helicopter helicopter) {
-		return (super.equals(helicopter) && this.equals(helicopter));
+		return (this.equals(helicopter)&& helicopter != null);
 	}
 }
