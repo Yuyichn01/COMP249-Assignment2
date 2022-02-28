@@ -1,105 +1,148 @@
 package sixthPackage;
 
 import firstPackage.Airplane;
+
 import secondPackage.*;
 import thirdPackage.Multirotor;
-import forthPackage.UAV;
-import fifthPackage.*;
 import java.util.Scanner;
+import fifthPackage.*;
+import forthPackage.UAV;
 
 public class Driver {
 
 	public static void main(String[] args) {
 
-		// create 5 helicopters, quadcopters and multirotor, 8 MAV and agricultural
-		Helicopter[] helicopter = new Helicopter[5];
-		Quadcopter[] quadcopter = new Quadcopter[5];
-		Multirotor[] multirotor = new Multirotor[5];
-		MAV[] mav = new MAV[8];
-		AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[8];
+		// create an array of 3 airplanes, 3 UAVs, 3 Helicopters,
+		// 2 Quadcopters, 3 multirotors, 3 MAVs, and 3 agricultrial drones
+		Airplane[] airplane = new Airplane[3];
+		UAV[] uav = new UAV[3];
+		Airplane[] helicopter = new Helicopter[3];
+		Airplane[] quadcopter = new Quadcopter[3];
+		Airplane[] multirotor = new Multirotor[3];
+		UAV[] mav = new MAV[3];
+		UAV[] agriculturalDrone = new AgriculturalDrone[3];
 
-		for (int i = 0; i <= 4; i++) {
+		// Assign the values to the airplanes
+		for (int i = 0; i <= 2; i++) {
+			airplane[i] = new Airplane();
+			airplane[i].setBrand(HBrand());
+			airplane[i].setHorsepower(horsePower());
+			airplane[i].setPrice(Price());
+		}
+
+		// Assign the values to the UAVs
+		for (int i = 0; i <= 2; i++) {
+			uav[i] = new UAV();
+			uav[i].setPrice(Price());
+			uav[i].setWeight(weight());
+		}
+
+		// Assign the values to the helicopters
+		for (int i = 0; i <= 2; i++) {
 			helicopter[i] = new Helicopter();
-			helicopter[i].setNoOfCylinders(Cylinder());
+			((Helicopter) helicopter[i]).setNoOfCylinders(Cylinder());
 			helicopter[i].setBrand(HBrand());
 			helicopter[i].setPrice(Price());
 			helicopter[i].setHorsepower(horsePower());
-			helicopter[i].setPassengerCapacity(passenger());
-			helicopter[i].setCreationYear(year());
+			((Helicopter) helicopter[i]).setPassengerCapacity(passenger());
+			((Helicopter) helicopter[i]).setCreationYear(year());
 		}
 
-		for (int i = 0; i <= 4; i++) {
+		// Assign the values to the quadcopters
+		for (int i = 0; i <= 2; i++) {
 			quadcopter[i] = new Quadcopter();
-			quadcopter[i].setNoOfCylinders(Cylinder());
+			((Helicopter) quadcopter[i]).setNoOfCylinders(Cylinder());
 			quadcopter[i].setBrand(HBrand());
 			quadcopter[i].setPrice(Price());
-			quadcopter[i].setMaxFlyingSpeed(maxSpeed());
-			quadcopter[i].setPassengerCapacity(passenger());
-			quadcopter[i].setCreationYear(year());
+			((Quadcopter) quadcopter[i]).setMaxFlyingSpeed(maxSpeed());
+			((Helicopter) quadcopter[i]).setPassengerCapacity(passenger());
+			((Helicopter) quadcopter[i]).setCreationYear(year());
+			quadcopter[i].setHorsepower(horsePower());
 		}
 
-		for (int i = 0; i <= 4; i++) {
+		// Assign the values to the multirotors
+		for (int i = 0; i <= 2; i++) {
 			multirotor[i] = new Multirotor();
-			multirotor[i].setNoOfCylinders(Cylinder());
+			((Helicopter) multirotor[i]).setNoOfCylinders(Cylinder());
 			multirotor[i].setBrand(HBrand());
 			multirotor[i].setPrice(Price());
 			multirotor[i].setHorsepower(horsePower());
-			multirotor[i].setPassengerCapacity(passenger());
-			multirotor[i].setCreationYear(year());
-			multirotor[i].setNoOfRotors(rotors());
+			((Helicopter) multirotor[i]).setPassengerCapacity(passenger());
+			((Helicopter) multirotor[i]).setCreationYear(year());
+			((Multirotor) multirotor[i]).setNoOfRotors(rotors());
 		}
 
-		for (int i = 0; i <= 4; i++) {
+		// Assign the values to the MAVs
+		for (int i = 0; i <= 2; i++) {
 			mav[i] = new MAV();
-			mav[i].setModel(model());
+			((MAV) mav[i]).setModel(model());
 			mav[i].setPrice(dronePrice());
-			mav[i].setSize(size());
-			mav[i].setSize(weight());
+			((MAV) mav[i]).setSize(size());
+			mav[i].setWeight(weight());
 		}
 
-		for (int i = 0; i <= 4; i++) {
+		// Assign the values to the agricultural drone
+		for (int i = 0; i <= 2; i++) {
 			agriculturalDrone[i] = new AgriculturalDrone();
-			agriculturalDrone[i].setBrand(AGDBrand());
-			agriculturalDrone[i].setCarryCapacity(capacity());
+			((AgriculturalDrone) agriculturalDrone[i]).setBrand(AGDBrand());
+			((AgriculturalDrone) agriculturalDrone[i]).setCarryCapacity(capacity());
 			agriculturalDrone[i].setPrice(dronePrice());
 			agriculturalDrone[i].setWeight(weight());
 		}
 
 		// display welcome message
-		System.out.println("--------------------------------");
-		System.out.println("welcome to our shop!");
-		System.out.println("--------------------------------");
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("⣿⣿⠏⣠⣾⣦⡐⢌⢿⣷⣦⣅⡑⠕⠡⠐⢿⠿⣛⠟⠛⠛⠛⠛⠡⢷⡈⢂⢕⢂⣛⡓⣉⠉⠙⠻⢿⣿⣿⣟⣻⠿⣹⡏⣿⣿⣧⢸⣧⣿⣿⣨⡟⣿⣿⣿\n"
+				+ "⠟⣡⣾⣿⣿⣿⣿⣦⣑⠝⢿⣿⣿⣿⣿⣿⡵⢁⣤⣶⣶⣿⢿⢿⢿⡟⢻⣤⢑⢂⠸⣷⣹⣿⠄⠄⠄⠄⠘⢿⣿⣿⣯⣳⣿⣭⣽⢼⣿⣜⣿⣇⣷⡹⣿⣿⣿\n"
+				+ "⣾⣿⣿⡿⢟⣛⣻⣿⣿⣿⣦⣬⣙⣻⣿⣿⣷⣿⣿⢟⢝⢕⢕⢕⢕⢽⣿⣿⣷⣔⠄⢻⣷⣿⡄⢈⠿⠇⢸⣿⣿⣿⣿⣿⣿⣟⠛⠲⢯⣿⣒⡾⣼⣷⡹⣿⣿\n"
+				+ "⣿⣿⠵⠚⠉⢀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⢕⢕⢕⢕⢕⢕⣽⣿⣿⣿⣿⡄⢸⣿⣿⣷⣬⣽⣯⣾⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⢀⠉⠙⠛⠛⠳⠽⠿\n"
+				+ "⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿⣿⣿⣿⡿⡇⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢄⣹⡿⠃⠄⠄⣰⠎⡈\n"
+				+ "⢌⠻⣿⡿⡫⡪⡪⡪⡪⣺⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣭⣽⣖⣄⣴⣯⣾⢷\n"
+				+ "⠣⡁⠹⡪⡪⡪⡪⣪⣾⣿⣿⣿⣿⠋⠐⢉⢍⢄⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⠏⠈⣧⠸⣿⣿⣿⣿⣿⣿⠯⠊⠙⢻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣾\n"
+				+ "⡣⡘⢄⠙⣾⣾⣾⣿⣿⣿⣿⣿⣿⡀⢐⢕⢕⢕⢕⢕⡘⣿⣿⣿⣿⣿⣿⠏⠠⠈⣿⣦⠹⣿⣿⣿⣿⣿⠄⢀⣴⢾⣼⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣾⣿\n"
+				+ "⠌⢊⢂⢣⠹⣿⣿⣿⣿⣿⣿⣿⣿⣧⢐⢕⢕⢕⢕⢕⢅⣿⣿⣿⣿⡿⢋⢜⠠⠈⣿⣿⣇⢽⣿⣿⣿⡏⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⡿⣿⣛⣻⠿⣟⣼⣿⣿\n"
+				+ "⠄⠁⠕⢝⡢⠈⠻⣿⣿⣿⣿⣿⣿⣿⣷⣕⣑⣑⣑⣵⣿⣿⣿⡿⢋⢔⢕⣿⠠⠈⣿⣿⣿⡎⣷⣽⠻⣇⣿⣿⣿⡿⣟⣵⣿⣟⣽⣾⣿⣿⣿⣿⢯⣾⣿⣿⣿                                                            ");
+		System.out.println("--------------------------------------------------------------\n");
+		enterToContinue();
+		System.out.println("Loading information of flying objects.........................\n");
 
-		// display choice
-		for (int i = 0; i <= 4; i++) {
-			System.out.println(helicopter[i].toString());
+		// display the information for those flying objects
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(airplane[i].toString() + "\n");
 		}
-		System.out.println();
-		
-		for (int i = 0; i <= 4; i++) {
-			System.out.println(quadcopter[i].toString());
+		enterToContinue();
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(uav[i].toString() + "\n");
 		}
-		System.out.println();
+		enterToContinue();
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(helicopter[i].toString() + "\n");
+		}
+		enterToContinue();
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(quadcopter[i].toString() + "\n");
+		}
+		enterToContinue();
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(multirotor[i].toString() + "\n");
+		}
+		enterToContinue();
 
-		for (int i = 0; i <= 4; i++) {
-			System.out.println(multirotor[i].toString());
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(mav[i].toString() + "\n");
 		}
-		System.out.println();
+		enterToContinue();
+		for (int i = 0; i <= 2; i++) {
+			System.out.println(agriculturalDrone[i].toString() + "\n");
+		}
+		enterToContinue();
 
-		for (int i = 0; i <= 4; i++) {
-			System.out.println(mav[i].toString());
-		}
-		System.out.println();
-
-		for (int i = 0; i <= 4; i++) {
-			System.out.println(agriculturalDrone[i].toString());
-		}
-		System.out.println();
+		// compare the equality of the flying objects
 
 	}
 
 	// A static method that accept any array of flying objects as a parameter
-	public static void findLeastAndMostExpensiveUAV() {
+	public static void findLeastAndMostExpensiveUAV(UAV[] uav) {
 
 	}
 
@@ -122,7 +165,7 @@ public class Driver {
 
 		switch (Num) {
 		case 1:
-			string = "Mil(CCCP)";
+			string = "Mil";
 			break;
 		case 2:
 			string = "Aviation Industry Corporation of China";
@@ -143,23 +186,48 @@ public class Driver {
 		return string;
 	}
 
-	// generate the power
+	// generate the price
 	public static double Price() {
-		double Num;
+		double price = 12100;
+		int Num;
 		do {
-			Num = (Math.random() * 100000000);
-		} while (Num < 20000000 || Num > 40000000);
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 3);
 
-		return Num;
+		switch (Num) {
+		case 1:
+			price = 21900;
+			break;
+		case 2:
+			price = 32500;
+			break;
+		case 3:
+			price = 40660;
+			break;
+		}
+		return price;
 	}
 
 	// generate the horse power
 	public static int horsePower() {
-		int Num;
+		int Num = 0;
+		int horsePower = 1200;
 		do {
 			Num = (int) (Math.random() * 10);
-		} while (Num < 2 || Num > 3);
-		return Num;
+		} while (Num < 1 || Num > 3);
+
+		switch (Num) {
+		case 1:
+			horsePower = 24000;
+			break;
+		case 2:
+			horsePower = 35000;
+			break;
+		case 3:
+			horsePower = 68000;
+			break;
+		}
+		return horsePower;
 	}
 
 	// generate the passenger
@@ -224,32 +292,72 @@ public class Driver {
 		return string;
 
 	}
-	
+
 	// generate the drone price
 	public static double dronePrice() {
-		double Num;
+		int Num;
+		double Price = 413.89;
 		do {
-			Num = (Math.random() * 100000);
-		} while (Num > 20000 || Num < 10000);
-		return Num;
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 3);
+
+		switch (Num) {
+		case 1:
+			Price = 657.91;
+			break;
+		case 2:
+			Price = 957.11;
+			break;
+		case 3:
+			Price = 1202.56;
+			break;
+		}
+		return Price;
 	}
 
 	// generate the size of drone
 	public static double size() {
-		double Num;
+		double size = 402.29;
+		int Num;
+		String string = " ";
 		do {
-			Num = (Math.random() * 0.1);
-		} while (Num < 0.02 || Num > 0.08);
-		return Num;
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 3);
+
+		switch (Num) {
+		case 1:
+			size = 115.67;
+			break;
+		case 2:
+			size = 192.34;
+			break;
+		case 3:
+			size = 322.98;
+			break;
+		}
+		return size;
 	}
 
 	// generate the weight of drone
 	public static double weight() {
-		double Num;
+		double weight = 0.8;
+		int Num;
 		do {
-			Num = (Math.random());
-		} while (Num < 0.50 || Num > 0.90);
-		return Num;
+			Num = (int) (Math.random() * 10);
+		} while (Num < 1 || Num > 3);
+
+		switch (Num) {
+		case 1:
+			weight = 1.4;
+			break;
+		case 2:
+			weight = 2.9;
+			break;
+		case 3:
+			weight = 3.8;
+			break;
+		}
+		return weight;
 	}
 
 	// generate the weight of drone
@@ -264,7 +372,7 @@ public class Driver {
 			string = "DJI";
 			break;
 		case 2:
-			string = "极飞";
+			string = "Ji Fei";
 			break;
 		case 3:
 			string = "Mitsubish";
@@ -280,6 +388,13 @@ public class Driver {
 			Num = (int) (Math.random() * 100);
 		} while (Num < 30 || Num > 80);
 		return Num;
-
 	}
+
+	public static void enterToContinue() {
+		System.out.println("Press enter key to continue...................................");
+		Scanner s = new Scanner(System.in);
+		s.nextLine();
+	}
+
 }
+
