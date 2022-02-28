@@ -13,6 +13,7 @@ public class Multirotor extends secondPackage.Helicopter {
 	
 	//copy constructor
 	public Multirotor(Multirotor multirotor) {
+		super(multirotor.noOfCylinders, multirotor.creationYear, multirotor.passengerCapacity);
 		this.noOfRotors = multirotor.noOfRotors;
 	}
 	
