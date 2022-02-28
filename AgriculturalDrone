@@ -1,6 +1,5 @@
 package fifthPackage;
-
-import fourthPackage.UAV;
+import forthPackage.UAV;
 
 public class AgriculturalDrone extends UAV {
 
@@ -55,16 +54,14 @@ public class AgriculturalDrone extends UAV {
 
 	// toString method
 	public String toString() {
-		return "The weight of this UAV is " + super.weight + "and the price of this UAV is " + super.price
-				+ ". The band of this AgriculturalDrone is " + this.brand
+		return "The weight of this Agricultural Drone is " + super.weight + " and the price of this Agricultural Drone is " + super.price
+				+ ". The brand of this AgriculturalDrone is " + this.brand
 				+ " and the carryCapacity of this AgriculturalDrone is " + this.carryCapacity;
 	}
 
 	// equals method
-	public boolean equals(MAV mav, UAV uav, AgriculturalDrone agdrone) {
-		return (super.equals(mav) && super.equals(uav) && super.equals(agdrone));
+	public boolean equals(AgriculturalDrone agdrone) {
+		return (this.equals(agdrone)&& agdrone != null);
 	}
 
 }
-
-
