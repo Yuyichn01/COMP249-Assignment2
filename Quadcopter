@@ -11,7 +11,6 @@ public class Quadcopter extends Helicopter {
 	
 	//copy constructor
 	public Quadcopter(Quadcopter quadcopter) {
-		super(quadcopter.noOfCylinders, quadcopter.creationYear, quadcopter.passengerCapacity);
 		this.maxFlyingSpeed = quadcopter.maxFlyingSpeed;
 	}
 	
