@@ -1,6 +1,7 @@
 package fifthPackage;
 
-import fourthPackage.UAV;
+import forthPackage.UAV;
+//@author: Yi Yu & ZiYi Tu ID: 40164162 & 
 
 public class MAV extends UAV {
 	// The model of MAV
@@ -64,8 +65,8 @@ public class MAV extends UAV {
 	}
 
 	// equals method
-	public boolean equals(MAV mav, UAV uav, AgriculturalDrone agdrone) {
-		return (super.equals(mav) && super.equals(uav) && super.equals(agdrone));
+	public boolean equals(MAV mav) {
+		return (this.equals(mav)&& mav != null);
 	}
 
 }
