@@ -1,13 +1,14 @@
-package driver;
+package sixthPackage;
 
 import firstPackage.Airplane;
 import secondPackage.*;
 import thirdPackage.Multirotor;
-import fourthPackage.UAV;
+import forthPackage.UAV;
 import fifthPackage.*;
 import java.util.Scanner;
 
 public class Driver {
+
 	public static void main(String[] args) {
 
 		// create 5 helicopters, quadcopters and multirotor, 8 MAV and agricultural
@@ -17,7 +18,6 @@ public class Driver {
 		MAV[] mav = new MAV[8];
 		AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[8];
 
-		// create 5 Helicopter
 		for (int i = 0; i <= 4; i++) {
 			helicopter[i] = new Helicopter();
 			helicopter[i].setNoOfCylinders(Cylinder());
@@ -27,7 +27,7 @@ public class Driver {
 			helicopter[i].setPassengerCapacity(passenger());
 			helicopter[i].setCreationYear(year());
 		}
-		// create 5 quadcopter
+
 		for (int i = 0; i <= 4; i++) {
 			quadcopter[i] = new Quadcopter();
 			quadcopter[i].setNoOfCylinders(Cylinder());
@@ -37,7 +37,7 @@ public class Driver {
 			quadcopter[i].setPassengerCapacity(passenger());
 			quadcopter[i].setCreationYear(year());
 		}
-		// create 5 mutirator
+
 		for (int i = 0; i <= 4; i++) {
 			multirotor[i] = new Multirotor();
 			multirotor[i].setNoOfCylinders(Cylinder());
@@ -48,16 +48,16 @@ public class Driver {
 			multirotor[i].setCreationYear(year());
 			multirotor[i].setNoOfRotors(rotors());
 		}
-		// create 8 MAV
-		for (int i = 0; i <= 7; i++) {
+
+		for (int i = 0; i <= 4; i++) {
 			mav[i] = new MAV();
 			mav[i].setModel(model());
 			mav[i].setPrice(dronePrice());
 			mav[i].setSize(size());
 			mav[i].setSize(weight());
 		}
-		// create 8 agricultural drone
-		for (int i = 0; i <= 7; i++) {
+
+		for (int i = 0; i <= 4; i++) {
 			agriculturalDrone[i] = new AgriculturalDrone();
 			agriculturalDrone[i].setBrand(AGDBrand());
 			agriculturalDrone[i].setCarryCapacity(capacity());
@@ -66,28 +66,35 @@ public class Driver {
 		}
 
 		// display welcome message
-		System.out.println("welcome to our shop");
+		System.out.println("--------------------------------");
+		System.out.println("welcome to our shop!");
+		System.out.println("--------------------------------");
 
 		// display choice
 		for (int i = 0; i <= 4; i++) {
 			System.out.println(helicopter[i].toString());
 		}
-
+		System.out.println();
+		
 		for (int i = 0; i <= 4; i++) {
 			System.out.println(quadcopter[i].toString());
 		}
+		System.out.println();
 
 		for (int i = 0; i <= 4; i++) {
 			System.out.println(multirotor[i].toString());
 		}
+		System.out.println();
 
 		for (int i = 0; i <= 4; i++) {
 			System.out.println(mav[i].toString());
 		}
+		System.out.println();
 
 		for (int i = 0; i <= 4; i++) {
 			System.out.println(agriculturalDrone[i].toString());
 		}
+		System.out.println();
 
 	}
 
@@ -99,9 +106,7 @@ public class Driver {
 	// generate the number of cylinder
 	public static int Cylinder() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
 		} while (Num < 4 || Num > 28);
 		return Num;
@@ -111,9 +116,7 @@ public class Driver {
 	public static String HBrand() {
 		int Num;
 		String string = null;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
 		} while (Num < 1 || Num > 6);
 
@@ -122,7 +125,7 @@ public class Driver {
 			string = "Mil(CCCP)";
 			break;
 		case 2:
-			string = "中国航空工业集团";
+			string = "Aviation Industry Corporation of China";
 			break;
 		case 3:
 			string = "Lockheed Martin";
@@ -143,9 +146,7 @@ public class Driver {
 	// generate the power
 	public static double Price() {
 		double Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (Math.random() * 100000000);
 		} while (Num < 20000000 || Num > 40000000);
 
@@ -154,20 +155,17 @@ public class Driver {
 
 	// generate the horse power
 	public static int horsePower() {
-		flipDice();
-		if (Num == 1) {
-			Num = 1000;
-		} else
-			Num = 2000;
+		int Num;
+		do {
+			Num = (int) (Math.random() * 10);
+		} while (Num < 2 || Num > 3);
 		return Num;
 	}
-	
+
 	// generate the passenger
 	public static int passenger() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 100);
 		} while (Num < 10 || Num > 16);
 
@@ -177,9 +175,7 @@ public class Driver {
 	// generate the year
 	public static int year() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10000);
 		} while (Num < 1942 || Num > 2022);
 
@@ -189,9 +185,7 @@ public class Driver {
 	// generate the max speed
 	public static int maxSpeed() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 1000);
 		} while (Num < 250 || Num > 400);
 
@@ -201,11 +195,9 @@ public class Driver {
 	// generate the rotors
 	public static int rotors() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num != 3 || Num != 4 || Num != 6 || Num != 8);
+		} while (Num < 3 || Num > 8);
 
 		return Num;
 	}
@@ -214,11 +206,9 @@ public class Driver {
 	public static String model() {
 		int Num;
 		String string = " ";
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num != 1 || Num != 2 || Num != 3);
+		} while (Num < 1 || Num > 3);
 
 		switch (Num) {
 		case 1:
@@ -234,24 +224,20 @@ public class Driver {
 		return string;
 
 	}
-
+	
 	// generate the drone price
 	public static double dronePrice() {
 		double Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (Math.random() * 100000);
-		} while (Num < 20000 || Num > 10000);
+		} while (Num > 20000 || Num < 10000);
 		return Num;
 	}
 
 	// generate the size of drone
 	public static double size() {
 		double Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (Math.random() * 0.1);
 		} while (Num < 0.02 || Num > 0.08);
 		return Num;
@@ -260,9 +246,7 @@ public class Driver {
 	// generate the weight of drone
 	public static double weight() {
 		double Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (Math.random());
 		} while (Num < 0.50 || Num > 0.90);
 		return Num;
@@ -272,9 +256,7 @@ public class Driver {
 	public static String AGDBrand() {
 		int Num;
 		String string = "";
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
 		} while (Num < 2 || Num > 3);
 		switch (Num) {
@@ -294,23 +276,10 @@ public class Driver {
 	// generate capacity of agriculture drone
 	public static int capacity() {
 		int Num;
-		// a do while statement to select only number laid between 1-6
 		do {
-			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 100);
 		} while (Num < 30 || Num > 80);
 		return Num;
 
 	}
-	
-	// a flipDice method to determine the number between 1-6
-	public static void flipDice() {
-		// a do while statement to select only number laid between 1-6
-		do {
-			// assign the random number value to diceNumber value
-			Num = (int) (Math.random() * 10);
-		} while (Num < 1 || Num > 6);
-
-	}
-
 }
