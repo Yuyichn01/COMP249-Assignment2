@@ -67,6 +67,6 @@ public class Airplane {
 	
 	//equals method
 	public boolean equals(Airplane airplane) {
-		return (this.equals(airplane));
+		return (this.equals(airplane)&& airplane != null);
 	}
 }
