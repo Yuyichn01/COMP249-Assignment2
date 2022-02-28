@@ -34,7 +34,7 @@ public class Multirotor extends secondPackage.Helicopter {
 	
 	//toString method
 	public String toString() {
-		return ("This Helicopter is manufacutured by " + super.Brand + " in " + super.creationYear 
+		return ("This Multirotor is manufacutured by " + super.Brand + " in " + super.creationYear 
 		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer. "
 		+ "It has " + super.noOfCylinders + " cylinders and " + this.noOfRotors + " rotors, and passenger capacity is "
 		+ super.passengerCapacity);
