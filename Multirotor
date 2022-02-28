@@ -1,7 +1,5 @@
 package thirdPackage;
 
-import secondPackage.Helicopter;
-
 public class Multirotor extends secondPackage.Helicopter {
 	//Number of rotors of multirotor
 	public int noOfRotors;
@@ -42,6 +40,6 @@ public class Multirotor extends secondPackage.Helicopter {
 	
 	//equals method
 	public boolean equals(Multirotor multirotor) {
-		return (super.equals(multirotor) && this.equals(multirotor));	
+		return (this.equals(multirotor)&& multirotor != null);
 	}
 }
