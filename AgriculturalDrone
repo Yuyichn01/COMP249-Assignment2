@@ -54,10 +54,10 @@ public class AgriculturalDrone extends UAV {
 	}
 
 	// toString method
-	public String toString(UAV uav, AgriculturalDrone agDrone) {
-		return "The weight of this UAV is " + uav.weight + "and the price of this UAV is " + uav.price
-				+ ". The band of this AgriculturalDrone is " + agDrone.brand
-				+ " and the carryCapacity of this AgriculturalDrone is " + agDrone.carryCapacity;
+	public String toString() {
+		return "The weight of this UAV is " + super.weight + "and the price of this UAV is " + super.price
+				+ ". The band of this AgriculturalDrone is " + this.brand
+				+ " and the carryCapacity of this AgriculturalDrone is " + this.carryCapacity;
 	}
 
 	// equals method
