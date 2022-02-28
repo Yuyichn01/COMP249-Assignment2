@@ -29,6 +29,7 @@ public class MAV extends UAV {
 
 	// The copy constructor
 	public MAV(MAV mav) {
+		super(mav.weight, mav.price);
 		// Copy the size value
 		this.size = mav.size;
 
