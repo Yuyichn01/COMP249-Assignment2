@@ -31,14 +31,14 @@ public class Quadcopter extends Helicopter {
 	
 	//toString method
 	public String toString() {
-		return ("This Quadcopter is manufacutured by " + super.Brand + " in " + super.creationYear 
+		return ("This quadcopter is manufacutured by " + super.Brand + " in " + super.creationYear 
 		+". It costs $" + super.price + " with a " + super.horsepower + " horsepwoer, and its max flying speed is "
-		+ this.maxFlyingSpeed + "It has " + super.noOfCylinders+ " cylinders, and passenger capacity is " 
+		+ this.maxFlyingSpeed + " It has " + super.noOfCylinders+ " cylinders, and passenger capacity is " 
 		+ super.passengerCapacity);
 	}
 	
 	//equals method
 	public boolean equals(Quadcopter quadcopter) {
-		return (super.equals(quadcopter) && this.equals(quadcopter));
+		return (this.equals(quadcopter)&& quadcopter != null);
 	}
 }
