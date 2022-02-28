@@ -28,9 +28,9 @@ public class AgriculturalDrone extends UAV {
 	// The copy constructor
 	public AgriculturalDrone(AgriculturalDrone agDrone) {
 
-		this.brand = agDrone.brand;
-
+		this.brand=agDrone.brand;
 		this.carryCapacity = agDrone.carryCapacity;
+		
 	}
 
 	// Getter method of brand
@@ -44,7 +44,7 @@ public class AgriculturalDrone extends UAV {
 	}
 
 	// Setter method of brand
-	public void setSize(String brand) {
+	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 
@@ -54,8 +54,9 @@ public class AgriculturalDrone extends UAV {
 	}
 
 	// toString method
-	public String toString(AgriculturalDrone agDrone) {
-		return "The band of this AgriculturalDrone is " + agDrone.brand
+	public String toString(UAV uav, AgriculturalDrone agDrone) {
+		return "The weight of this UAV is " + uav.weight + "and the price of this UAV is " + uav.price
+				+ ". The band of this AgriculturalDrone is " + agDrone.brand
 				+ " and the carryCapacity of this AgriculturalDrone is " + agDrone.carryCapacity;
 	}
 
@@ -65,4 +66,5 @@ public class AgriculturalDrone extends UAV {
 	}
 
 }
+
 
