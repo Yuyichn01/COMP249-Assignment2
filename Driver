@@ -154,16 +154,14 @@ public class Driver {
 
 	// generate the horse power
 	public static int horsePower() {
-		int Num;
-		// a do while statement to select only number laid between 1-6
-		do {
-			// assign the random number value to diceNumber value
-			Num = (int) (Math.random() * 10);
-		} while (Num != 2 || Num != 1);
-		Num = Num * 1000;
+		flipDice();
+		if (Num == 1) {
+			Num = 1000;
+		} else
+			Num = 2000;
 		return Num;
 	}
-
+	
 	// generate the passenger
 	public static int passenger() {
 		int Num;
