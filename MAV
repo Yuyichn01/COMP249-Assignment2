@@ -58,9 +58,9 @@ public class MAV extends UAV {
 	}
 
 	// toString method
-	public String toString(UAV uav, MAV mav) {
-		return "The weight of this UAV is " + uav.weight + "and the price of this UAV is " + uav.price
-				+ ". The model of this MAV is " + mav.model + " and the size of this MAV is " + mav.size;
+	public String toString() {
+		return "The weight of this UAV is " + super.weight + "and the price of this UAV is " + super.price
+				+ ". The model of this MAV is " + this.model + " and the size of this MAV is " + this.size;
 	}
 
 	// equals method
