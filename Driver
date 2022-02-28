@@ -9,9 +9,8 @@ import java.util.Scanner;
 
 public class Driver {
 	public static void main(String[] args) {
-
+		
 		// create 5 helicopters, quadcopters and multirotor, 8 MAV and agricultural
-		// drone
 		Helicopter[] helicopter = new Helicopter[5];
 		Quadcopter[] quadcopter = new Quadcopter[5];
 		Multirotor[] multirotor = new Multirotor[5];
@@ -66,23 +65,23 @@ public class Driver {
 
 		// display choice
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(helicopter[i].toString());
+			helicopter[i].toString();
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(quadcopter[i].toString());
+			quadcopter[i].toString();
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(multirotor[i].toString());
+			multirotor[i].toString();
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(mav[i].toString());
+			mav[i].toString();
 		}
 		
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(agriculturalDrone[i].toString());
+			agriculturalDrone[i].toString();
 		}
 
 	}
@@ -112,7 +111,7 @@ public class Driver {
 		do {
 			// assign the random number value to diceNumber value
 			Num = (int) (Math.random() * 10);
-		} while (Num <= 1 || Num >= 6);
+		} while (Num <= 6 || Num >= 1);
 
 		switch (Num) {
 		case 1:
@@ -240,7 +239,7 @@ public class Driver {
 		// a do while statement to select only number laid between 1-6
 		do {
 			// assign the random number value to diceNumber value
-			Num = (int) (Math.random());
+			Num =  (Math.random());
 		} while (Num <= 4000.0 || Num >= 20000.0);
 		return Num;
 	}
@@ -251,7 +250,7 @@ public class Driver {
 		// a do while statement to select only number laid between 1-6
 		do {
 			// assign the random number value to diceNumber value
-			Num = (int) (Math.random());
+			Num = (Math.random());
 		} while (Num <= 0.08 || Num >= 0.02);
 		return Num;
 	}
@@ -262,8 +261,8 @@ public class Driver {
 		// a do while statement to select only number laid between 1-6
 		do {
 			// assign the random number value to diceNumber value
-			Num = (int) (Math.random());
-		} while (Num <= 0.5 || Num >= 1.2);
+			Num = (Math.random());
+		} while (Num <= 1.2 || Num >=0.5);
 		return Num;
 	}
 
@@ -302,3 +301,4 @@ public class Driver {
 	}
 
 }
+
