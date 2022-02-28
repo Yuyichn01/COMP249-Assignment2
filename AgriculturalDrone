@@ -27,7 +27,7 @@ public class AgriculturalDrone extends UAV {
 
 	// The copy constructor
 	public AgriculturalDrone(AgriculturalDrone agDrone) {
-
+		super(agDrone.weight, agDrone.price);
 		this.brand=agDrone.brand;
 		this.carryCapacity = agDrone.carryCapacity;
 		
