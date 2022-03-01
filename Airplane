@@ -62,7 +62,7 @@ public class Airplane {
 	//toString method
 	public String toString() {
 		return ("This Airplane is manufacutured by " + this.Brand + ". It costs $" 
-				+ this.price + " with a " + this.horsepower + " horsepwoer");
+				+ this.price + " with " + this.horsepower + " horsepower");
 	}
 	
 	//equals method
