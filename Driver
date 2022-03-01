@@ -229,7 +229,7 @@ public class Driver {
 			System.out.println("There is no objects found in the input array!");
 
 		} else if (uav.length == 1) {
-			System.out.println("There is only one objects in the array. " + uav.toString());
+			System.out.println("There is only one objects in the array. " + uav[0].toString());
 		}
 	}
 
