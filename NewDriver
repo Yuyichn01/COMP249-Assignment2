@@ -1,0 +1,87 @@
+package seventhPackage;
+
+import java.util.Scanner;
+import firstPackage.Airplane;
+import secondPackage.*;
+import thirdPackage.Multirotor;
+import forthPackage.UAV;
+import fifthPackage.*;
+
+public class NewDriver {
+
+	public static void main(String[] args) {
+
+	}
+
+	// copy and return an array of input objects
+	public static Object copyFlyingObjects(Object[] object) {
+		// 1 Quadcopters, 1 multirotors, 1 MAVs, and 1 agricultrial drones
+		Airplane[] airplane = new Airplane[1];
+		UAV[] uav = new UAV[1];
+		MAV[] mav = new MAV[1];
+		AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[1];
+		Helicopter[] helicopter = new Helicopter[1];
+		Quadcopter[] quadcopter = new Quadcopter[1];
+		Multirotor[] multirotor = new Multirotor[1];
+
+		if (object.getClass() == mav.getClass()) {
+			MAV[] mavCopy = new MAV[object.length];
+			for (int i = 0; i < object.length; i++) {
+				mavCopy[i].setModel(((MAV) object[i]).getModel());
+				mavCopy[i].setPrice(((MAV) object[i]).getPrice());
+				mavCopy[i].setSize(((MAV) object[i]).getSize());
+				mavCopy[i].setWeight(((MAV) object[i]).getWeight());
+			}
+			return mavCopy;
+		}
+		if (object.getClass() == uav.getClass()) {
+			UAV[] uavCopy = new UAV[object.length];
+			for (int i = 0; i < object.length; i++) {
+				uavCopy[i].setPrice(((UAV) object[i]).getPrice());
+				uavCopy[i].setWeight(((UAV) object[i]).getWeight());
+			}
+			return uavCopy;
+		}
+		if (object.getClass() == airplane.getClass()) {
+			Airplane[] airplaneCopy = new Airplane[object.length];
+			for (int i = 0; i < object.length; i++) {
+				airplaneCopy[i].setHorsepower(((Airplane) object[i]).getHorsepower());
+				airplaneCopy[i].setPrice(((Airplane) object[i]).getPrice());
+				airplaneCopy[i].setBrand(((Airplane) object[i]).getBrand());
+			}
+			return airplaneCopy;
+		}
+		if (object.getClass() == agriculturalDrone.getClass()) {
+			AgriculturalDrone[] agriculturalDroneCopy = new AgriculturalDrone[object.length];
+			for (int i = 0; i < object.length; i++) {
+				agriculturalDroneCopy[i].setBrand(((AgriculturalDrone) object[i]).getBrand());
+				agriculturalDroneCopy[i].setCarryCapacity(((AgriculturalDrone) object[i]).getCarryCapacity());
+				agriculturalDroneCopy[i].setPrice(((AgriculturalDrone) object[i]).getPrice());
+				agriculturalDroneCopy[i].setWeight(((AgriculturalDrone) object[i]).getWeight());
+			}
+			return agriculturalDroneCopy;
+		}
+		if (object.getClass() == helicopter.getClass()) {
+			if (object.getClass() == helicopter.getClass()) {
+				Helicopter[] helicopterCopy = new Helicopter[object.length];
+				for (int i = 0; i < object.length; i++) {
+					helicopterCopy[i].setBrand(((Helicopter)object[i]).getBrand());
+					helicopterCopy[i].setCreationYear(((Helicopter)object[i]).getCreationYear());
+					helicopterCopy[i].setPrice(((Helicopter)object[i]).getPrice());
+					helicopterCopy[i].setNoOfCylinders(((Helicopter)object[i]).getNoOfCylinders());
+					
+				}
+				return helicopterCopy;
+			}
+
+		}
+		if (object.getClass() == quadcopter.getClass()) {
+
+		}
+		if (object.getClass() == multirotor.getClass()) {
+
+		}
+
+	}
+
+}
