@@ -90,13 +90,21 @@ public class Driver {
 			agriculturalDrone[i].setWeight(weight());
 		}
 
+		// Assign the same values to two agricultural drone
+		for (int i = 1; i <= 2; i++) {
+			((AgriculturalDrone) agriculturalDrone[i]).setBrand("DJI");
+			((AgriculturalDrone) agriculturalDrone[i]).setCarryCapacity(5);
+			agriculturalDrone[i].setPrice(3000);
+			agriculturalDrone[i].setWeight(48);
+		}
+
 		// display welcome message
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("⣿⣿⠏⣠⣾⣦⡐⢌⢿⣷⣦⣅⡑⠕⠡⠐⢿⠿⣛⠟⠛⠛⠛⠛⠡⢷⡈⢂⢕⢂⣛⡓⣉⠉⠙⠻⢿⣿⣿⣟⣻⠿⣹⡏⣿⣿⣧⢸⣧⣿⣿⣨⡟⣿⣿⣿\n"
 				+ "⠟⣡⣾⣿⣿⣿⣿⣦⣑⠝⢿⣿⣿⣿⣿⣿⡵⢁⣤⣶⣶⣿⢿⢿⢿⡟⢻⣤⢑⢂⠸⣷⣹⣿⠄⠄⠄⠄⠘⢿⣿⣿⣯⣳⣿⣭⣽⢼⣿⣜⣿⣇⣷⡹⣿⣿⣿\n"
 				+ "⣾⣿⣿⡿⢟⣛⣻⣿⣿⣿⣦⣬⣙⣻⣿⣿⣷⣿⣿⢟⢝⢕⢕⢕⢕⢽⣿⣿⣷⣔⠄⢻⣷⣿⡄⢈⠿⠇⢸⣿⣿⣿⣿⣿⣿⣟⠛⠲⢯⣿⣒⡾⣼⣷⡹⣿⣿\n"
 				+ "⣿⣿⠵⠚⠉⢀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⢕⢕⢕⢕⢕⢕⣽⣿⣿⣿⣿⡄⢸⣿⣿⣷⣬⣽⣯⣾⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⢀⠉⠙⠛⠛⠳⠽⠿\n"
-				+ "⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿⣿⣿⣿⡿⡇⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢄⣹⡿⠃⠄⠄⣰⠎⡈\n"
+				+ "⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿WELCOME⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢄⣹⡿⠃⠄⠄⣰⠎⡈\n"
 				+ "⢌⠻⣿⡿⡫⡪⡪⡪⡪⣺⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣭⣽⣖⣄⣴⣯⣾⢷\n"
 				+ "⠣⡁⠹⡪⡪⡪⡪⣪⣾⣿⣿⣿⣿⠋⠐⢉⢍⢄⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⠏⠈⣧⠸⣿⣿⣿⣿⣿⣿⠯⠊⠙⢻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣾\n"
 				+ "⡣⡘⢄⠙⣾⣾⣾⣿⣿⣿⣿⣿⣿⡀⢐⢕⢕⢕⢕⢕⡘⣿⣿⣿⣿⣿⣿⠏⠠⠈⣿⣦⠹⣿⣿⣿⣿⣿⠄⢀⣴⢾⣼⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣾⣿\n"
@@ -138,6 +146,32 @@ public class Driver {
 		enterToContinue();
 
 		// compare the equality of the flying objects
+		System.out.println("Comparing equality of objects from different class..............\n");
+		String string;
+		if (quadcopter[0].getBrand() == multirotor[0].getBrand()
+				&& quadcopter[0].getHorsepower() == multirotor[0].getHorsepower()
+				&& quadcopter[0].getPrice() == multirotor[0].getPrice()
+				&& ((Helicopter) quadcopter[0]).getCreationYear() == ((Helicopter) multirotor[0]).getCreationYear()
+				&& ((Helicopter) quadcopter[0]).getPassengerCapacity() == ((Helicopter) multirotor[0]).getPassengerCapacity()
+				&& ((Helicopter) quadcopter[0]).getNoOfCylinders() == ((Helicopter) multirotor[0]).getNoOfCylinders()) {
+			string = " the same";
+		} else
+			string = " different";
+		System.out.println("The first quadcopter and the first multirotor is " + string +"\n");
+		enterToContinue();
+		System.out.println("Comparing equality of objects from same class..............\n");
+		if (agriculturalDrone[0].equals(agriculturalDrone[1])) {
+			string = " the same";
+		} else
+			string = " different";
+		System.out.println("The first Agricultural drone and the second Agricultural drone is " + string+"\n");
+
+		System.out.println("Comparing equality of objects with similar values from same class..............\n");
+		if (agriculturalDrone[0].equals(agriculturalDrone[1])) {
+			string = " the same";
+		} else
+			string = " different";
+		System.out.println("The second Agricultural drone and the third Agricultural drone is " + string+"\n");
 
 	}
 
