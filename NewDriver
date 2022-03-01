@@ -85,3 +85,450 @@ public class NewDriver {
 	}
 
 }
+package seventhPackage;
+
+import java.util.Scanner;
+import firstPackage.Airplane;
+import secondPackage.*;
+import thirdPackage.Multirotor;
+import forthPackage.UAV;
+import fifthPackage.*;
+
+public class NewDriver {
+
+	public static void main(String[] args) {
+
+		// an array of 21 objects from each class
+		// create an array of 3 airplanes, 3 UAVs, 3 Helicopters,
+				// 2 Quadcopters, 3 multirotors, 3 MAVs, and 3 agricultrial drones
+				Airplane[] airplane = new Airplane[3];
+				UAV[] uav = new UAV[3];
+				MAV[] mav = new MAV[3];
+				AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[3];
+				Helicopter[] helicopter = new Helicopter[3];
+				Quadcopter[] quadcopter = new Quadcopter[3];
+				Multirotor[] multirotor = new Multirotor[3];
+		//input an array of multirotors in copyFlyingObjects method
+				// Assign the values to the airplanes
+				for (int i = 0; i <= 2; i++) {
+					airplane[i] = new Airplane();
+					airplane[i].setBrand(HBrand());
+					airplane[i].setHorsepower(horsePower());
+					airplane[i].setPrice(Price());
+				}
+
+				// Assign the values to the UAVs
+				for (int i = 0; i <= 2; i++) {
+					uav[i] = new UAV();
+					uav[i].setPrice(Price());
+					uav[i].setWeight(weight());
+				}
+
+				// Assign the values to the helicopters
+				for (int i = 0; i <= 2; i++) {
+					helicopter[i] = new Helicopter();
+					((Helicopter) helicopter[i]).setNoOfCylinders(Cylinder());
+					helicopter[i].setBrand(HBrand());
+					helicopter[i].setPrice(Price());
+					helicopter[i].setHorsepower(horsePower());
+					((Helicopter) helicopter[i]).setPassengerCapacity(passenger());
+					((Helicopter) helicopter[i]).setCreationYear(year());
+				}
+
+				// Assign the values to the quadcopters
+				for (int i = 0; i <= 2; i++) {
+					quadcopter[i] = new Quadcopter();
+					((Helicopter) quadcopter[i]).setNoOfCylinders(Cylinder());
+					quadcopter[i].setBrand(HBrand());
+					quadcopter[i].setPrice(Price());
+					((Quadcopter) quadcopter[i]).setMaxFlyingSpeed(maxSpeed());
+					((Helicopter) quadcopter[i]).setPassengerCapacity(passenger());
+					((Helicopter) quadcopter[i]).setCreationYear(year());
+					quadcopter[i].setHorsepower(horsePower());
+				}
+
+				// Assign the values to the multirotors
+				for (int i = 0; i <= 2; i++) {
+					multirotor[i] = new Multirotor();
+					((Helicopter) multirotor[i]).setNoOfCylinders(Cylinder());
+					multirotor[i].setBrand(HBrand());
+					multirotor[i].setPrice(Price());
+					multirotor[i].setHorsepower(horsePower());
+					((Helicopter) multirotor[i]).setPassengerCapacity(passenger());
+					((Helicopter) multirotor[i]).setCreationYear(year());
+					((Multirotor) multirotor[i]).setNoOfRotors(rotors());
+				}
+
+				// Assign the values to the MAVs
+				for (int i = 0; i <= 2; i++) {
+					mav[i] = new MAV();
+					((MAV) mav[i]).setModel(model());
+					mav[i].setPrice(dronePrice());
+					((MAV) mav[i]).setSize(size());
+					mav[i].setWeight(weight());
+				}
+
+				// Assign the values to the agricultural drone
+				for (int i = 0; i <= 2; i++) {
+					agriculturalDrone[i] = new AgriculturalDrone();
+					((AgriculturalDrone) agriculturalDrone[i]).setBrand(AGDBrand());
+					((AgriculturalDrone) agriculturalDrone[i]).setCarryCapacity(capacity());
+					agriculturalDrone[i].setPrice(dronePrice());
+					agriculturalDrone[i].setWeight(weight());
+				}
+
+				// Assign the same values to two agricultural drone
+				for (int i = 1; i <= 2; i++) {
+					((AgriculturalDrone) agriculturalDrone[i]).setBrand("DJI");
+					((AgriculturalDrone) agriculturalDrone[i]).setCarryCapacity(5);
+					agriculturalDrone[i].setPrice(3000);
+					agriculturalDrone[i].setWeight(48);
+				}
+				copyFlyingObjects(airplane);
+	}
+
+	// copy and return an array of input objects
+	public static Object copyFlyingObjects(Object[] object) {
+		// 1 Quadcopters, 1 multirotors, 1 MAVs, and 1 agricultrial drones
+		Airplane[] airplane = new Airplane[1];
+		UAV[] uav = new UAV[1];
+		MAV[] mav = new MAV[1];
+		AgriculturalDrone[] agriculturalDrone = new AgriculturalDrone[1];
+		Helicopter[] helicopter = new Helicopter[1];
+		Quadcopter[] quadcopter = new Quadcopter[1];
+		Multirotor[] multirotor = new Multirotor[1];
+
+		if (object.getClass() == mav.getClass()) {
+			MAV[] mavCopy = new MAV[object.length];
+			for (int i = 0; i < object.length; i++) {
+				mavCopy[i].setModel(((MAV) object[i]).getModel());
+				mavCopy[i].setPrice(((MAV) object[i]).getPrice());
+				mavCopy[i].setSize(((MAV) object[i]).getSize());
+				mavCopy[i].setWeight(((MAV) object[i]).getWeight());
+			}
+			return mavCopy;
+		}
+		else if (object.getClass() == uav.getClass()) {
+			UAV[] uavCopy = new UAV[object.length];
+			for (int i = 0; i < object.length; i++) {
+				uavCopy[i].setPrice(((UAV) object[i]).getPrice());
+				uavCopy[i].setWeight(((UAV) object[i]).getWeight());
+			}
+			return uavCopy;
+		}
+		else if (object.getClass() == airplane.getClass()) {
+			Airplane[] airplaneCopy = new Airplane[object.length];
+			for (int i = 0; i < object.length; i++) {
+				airplaneCopy[i].setHorsepower(((Airplane) object[i]).getHorsepower());
+				airplaneCopy[i].setPrice(((Airplane) object[i]).getPrice());
+				airplaneCopy[i].setBrand(((Airplane) object[i]).getBrand());
+			}
+			return airplaneCopy;
+		}
+		else if (object.getClass() == agriculturalDrone.getClass()) {
+			AgriculturalDrone[] agriculturalDroneCopy = new AgriculturalDrone[object.length];
+			for (int i = 0; i < object.length; i++) {
+				agriculturalDroneCopy[i].setBrand(((AgriculturalDrone) object[i]).getBrand());
+				agriculturalDroneCopy[i].setCarryCapacity(((AgriculturalDrone) object[i]).getCarryCapacity());
+				agriculturalDroneCopy[i].setPrice(((AgriculturalDrone) object[i]).getPrice());
+				agriculturalDroneCopy[i].setWeight(((AgriculturalDrone) object[i]).getWeight());
+			}
+			return agriculturalDroneCopy;
+		}
+
+		else if (object.getClass() == helicopter.getClass()) {
+			Helicopter[] helicopterCopy = new Helicopter[object.length];
+			for (int i = 0; i < object.length; i++) {
+				helicopterCopy[i].setBrand(((Helicopter) object[i]).getBrand());
+				helicopterCopy[i].setCreationYear(((Helicopter) object[i]).getCreationYear());
+				helicopterCopy[i].setPrice(((Helicopter) object[i]).getPrice());
+				helicopterCopy[i].setNoOfCylinders(((Helicopter) object[i]).getNoOfCylinders());
+				helicopterCopy[i].setPassengerCapacity(((Helicopter) object[i]).getPassengerCapacity());
+				helicopterCopy[i].setHorsepower(((Helicopter) object[i]).getHorsepower());
+			}
+			return helicopterCopy;
+		}
+
+		else if (object.getClass() == quadcopter.getClass()) {
+			Quadcopter[] quadcopterCopy = new Quadcopter[object.length];
+			for (int i = 0; i < object.length; i++) {
+				quadcopterCopy[i].setBrand(((Quadcopter) object[i]).getBrand());
+				quadcopterCopy[i].setCreationYear(((Quadcopter) object[i]).getCreationYear());
+				quadcopterCopy[i].setPrice(((Quadcopter) object[i]).getPrice());
+				quadcopterCopy[i].setNoOfCylinders(((Quadcopter) object[i]).getNoOfCylinders());
+				quadcopterCopy[i].setPassengerCapacity(((Quadcopter) object[i]).getPassengerCapacity());
+				quadcopterCopy[i].setHorsepower(((Quadcopter) object[i]).getHorsepower());
+				quadcopterCopy[i].setMaxFlyingSpeed(((Quadcopter) object[i]).getMaxFlyingSpeed());
+			}
+			return quadcopterCopy;
+
+		}
+		else if (object.getClass() == multirotor.getClass()) {
+			Multirotor[] multirotorCopy = new Multirotor[object.length];
+			for (int i = 0; i < object.length; i++) {
+				multirotorCopy[i].setBrand(((Multirotor) object[i]).getBrand());
+				multirotorCopy[i].setCreationYear(((Multirotor) object[i]).getCreationYear());
+				multirotorCopy[i].setPrice(((Multirotor) object[i]).getPrice());
+				multirotorCopy[i].setNoOfCylinders(((Multirotor) object[i]).getNoOfCylinders());
+				multirotorCopy[i].setPassengerCapacity(((Multirotor) object[i]).getPassengerCapacity());
+				multirotorCopy[i].setHorsepower(((Multirotor) object[i]).getHorsepower());
+				multirotorCopy[i].setNoOfRotors((((Multirotor) object[i]).getNoOfRotors()));
+			}
+			return multirotorCopy;
+
+		} 
+		else return null;
+
+	}
+	
+	// generate the number of cylinder
+		public static int Cylinder() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 4 || Num > 28);
+			return Num;
+		}
+
+		// generate the brand
+		public static String HBrand() {
+			int Num;
+			String string = null;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 6);
+
+			switch (Num) {
+			case 1:
+				string = "Mil";
+				break;
+			case 2:
+				string = "Aviation Industry Corporation of China";
+				break;
+			case 3:
+				string = "Lockheed Martin";
+				break;
+			case 4:
+				string = "Air Bus";
+				break;
+			case 5:
+				string = "Boeing";
+				break;
+			case 6:
+				string = "DENEL AVIATION";
+				break;
+			}
+			return string;
+		}
+
+		// generate the price
+		public static double Price() {
+			double price = 12100;
+			int Num;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				price = 21900;
+				break;
+			case 2:
+				price = 32500;
+				break;
+			case 3:
+				price = 40660;
+				break;
+			}
+			return price;
+		}
+
+		// generate the horse power
+		public static int horsePower() {
+			int Num = 0;
+			int horsePower = 1200;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				horsePower = 24000;
+				break;
+			case 2:
+				horsePower = 35000;
+				break;
+			case 3:
+				horsePower = 68000;
+				break;
+			}
+			return horsePower;
+		}
+
+		// generate the passenger
+		public static int passenger() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 100);
+			} while (Num < 10 || Num > 16);
+
+			return Num;
+		}
+
+		// generate the year
+		public static int year() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 10000);
+			} while (Num < 1942 || Num > 2022);
+
+			return Num;
+		}
+
+		// generate the max speed
+		public static int maxSpeed() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 1000);
+			} while (Num < 250 || Num > 400);
+
+			return Num;
+		}
+
+		// generate the rotors
+		public static int rotors() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 3 || Num > 8);
+
+			return Num;
+		}
+
+		// generate the model
+		public static String model() {
+			int Num;
+			String string = " ";
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				string = "Military";
+				break;
+			case 2:
+				string = "Business";
+				break;
+			case 3:
+				string = "Civil";
+				break;
+			}
+			return string;
+
+		}
+
+		// generate the drone price
+		public static double dronePrice() {
+			int Num;
+			double Price = 413.89;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				Price = 657.91;
+				break;
+			case 2:
+				Price = 957.11;
+				break;
+			case 3:
+				Price = 1202.56;
+				break;
+			}
+			return Price;
+		}
+
+		// generate the size of drone
+		public static double size() {
+			double size = 402.29;
+			int Num;
+			String string = " ";
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				size = 115.67;
+				break;
+			case 2:
+				size = 192.34;
+				break;
+			case 3:
+				size = 322.98;
+				break;
+			}
+			return size;
+		}
+
+		// generate the weight of drone
+		public static double weight() {
+			double weight = 0.8;
+			int Num;
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 1 || Num > 3);
+
+			switch (Num) {
+			case 1:
+				weight = 1.4;
+				break;
+			case 2:
+				weight = 2.9;
+				break;
+			case 3:
+				weight = 3.8;
+				break;
+			}
+			return weight;
+		}
+
+		// generate the weight of drone
+		public static String AGDBrand() {
+			int Num;
+			String string = "";
+			do {
+				Num = (int) (Math.random() * 10);
+			} while (Num < 2 || Num > 3);
+			switch (Num) {
+			case 1:
+				string = "DJI";
+				break;
+			case 2:
+				string = "Ji Fei";
+				break;
+			case 3:
+				string = "Mitsubish";
+				break;
+			}
+			return string;
+		}
+
+		// generate capacity of agriculture drone
+		public static int capacity() {
+			int Num;
+			do {
+				Num = (int) (Math.random() * 100);
+			} while (Num < 30 || Num > 80);
+			return Num;
+		}
+
+		public static void enterToContinue() {
+			System.out.println("Press enter key to continue...................................");
+			Scanner s = new Scanner(System.in);
+			s.nextLine();
+		}
+
+}
