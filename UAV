@@ -55,13 +55,13 @@ public class UAV {
 	}
 
 	// toString method
-	public String toString(UAV uav) {
-		return "The weight of this UAV is " + uav.weight + " and the price of this UAV is " + uav.price;
+	public String toString() {
+		return ("The weight of this UAV is " + this.weight + "and the price of this UAV is " + this.price);
 	}
 
 	// equals method
 	public boolean equals(UAV uav) {
-		return (this.equals(uav)&& uav != null);
+		return (this.price==uav.price && this.weight==uav.weight);
 	}
 
 }
