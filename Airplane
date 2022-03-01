@@ -67,6 +67,6 @@ public class Airplane {
 	
 	//equals method
 	public boolean equals(Airplane airplane) {
-		return (this.equals(airplane)&& airplane != null);
+		return (this.Brand==airplane.Brand && this.price==airplane.price && this.horsepower==airplane.horsepower);
 	}
 }
