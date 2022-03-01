@@ -184,7 +184,8 @@ public class Driver {
 		} else
 			string = "different";
 		System.out.println("The second Agricultural drone and the third Agricultural drone is " + string+"\n");
-
+		
+		findLeastAndMostExpensiveUAV(uav);
 	}
 
 	// A static method that accept any array of flying objects as a parameter
@@ -196,33 +197,33 @@ public class Driver {
 		if (uav.length > 1) {
 			if (price1 > price2 && price1 > price3 && price2 > price3) {
 				System.out.println("The first UAV is the most expensive and the third UAV is the least expensive");
-				System.out.println(uav[0].toString(uav[0]));
-				System.out.println(uav[2].toString(uav[2]));
+				System.out.println(uav[0].toString());
+				System.out.println(uav[2].toString());
 			}
 			if (price1 > price2 && price1 > price3 && price3 > price2) {
 				System.out.println("The first UAV is the most expensive and the second UAV is the least expensive");
-				System.out.println(uav[0].toString(uav[0]));
-				System.out.println(uav[1].toString(uav[1]));
+				System.out.println(uav[0].toString());
+				System.out.println(uav[1].toString());
 			}
 			if (price2 > price1 && price2 > price3 && price3 > price1) {
 				System.out.println("The second UAV is the most expensive and the first UAV is the least expensive");
-				System.out.println(uav[1].toString(uav[1]));
-				System.out.println(uav[0].toString(uav[0]));
+				System.out.println(uav[1].toString());
+				System.out.println(uav[0].toString());
 			}
 			if (price2 > price1 && price2 > price3 && price1 > price3) {
 				System.out.println("The second UAV is the most expensive and the third UAV is the least expensive");
-				System.out.println(uav[1].toString(uav[1]));
-				System.out.println(uav[2].toString(uav[2]));
+				System.out.println(uav[1].toString());
+				System.out.println(uav[2].toString());
 			}
 			if (price3 > price1 && price3 > price2 && price1 > price2) {
 				System.out.println("The third UAV is the most expensive and the second UAV is the least expensive");
-				System.out.println(uav[2].toString(uav[2]));
-				System.out.println(uav[1].toString(uav[1]));
+				System.out.println(uav[2].toString());
+				System.out.println(uav[1].toString());
 			}
 			if (price3 > price1 && price3 > price2 && price2 > price1) {
 				System.out.println("The third UAV is the most expensive and the first UAV is the least expensive");
-				System.out.println(uav[2].toString(uav[2]));
-				System.out.println(uav[0].toString(uav[0]));
+				System.out.println(uav[2].toString());
+				System.out.println(uav[0].toString());
 			}
 		} else if (uav.length == 0) {
 			System.out.println("There is no objects found in the input array!");
