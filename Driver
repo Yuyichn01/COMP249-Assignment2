@@ -185,6 +185,7 @@ public class Driver {
 			string = "different";
 		System.out.println("The second Agricultural drone and the third Agricultural drone are " + string+"\n");
 		
+		//invoke the comparing method 
 		findLeastAndMostExpensiveUAV(uav);
 	}
 
