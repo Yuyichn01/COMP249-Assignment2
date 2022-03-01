@@ -100,16 +100,28 @@ public class Driver {
 
 		// display welcome message
 		System.out.println("--------------------------------------------------------------");
-		System.out.println("⣿⣿⠏⣠⣾⣦⡐⢌⢿⣷⣦⣅⡑⠕⠡⠐⢿⠿⣛⠟⠛⠛⠛⠛⠡⢷⡈⢂⢕⢂⣛⡓⣉⠉⠙⠻⢿⣿⣿⣟⣻⠿⣹⡏⣿⣿⣧⢸⣧⣿⣿⣨⡟⣿⣿⣿\n"
-				+ "⠟⣡⣾⣿⣿⣿⣿⣦⣑⠝⢿⣿⣿⣿⣿⣿⡵⢁⣤⣶⣶⣿⢿⢿⢿⡟⢻⣤⢑⢂⠸⣷⣹⣿⠄⠄⠄⠄⠘⢿⣿⣿⣯⣳⣿⣭⣽⢼⣿⣜⣿⣇⣷⡹⣿⣿⣿\n"
-				+ "⣾⣿⣿⡿⢟⣛⣻⣿⣿⣿⣦⣬⣙⣻⣿⣿⣷⣿⣿⢟⢝⢕⢕⢕⢕⢽⣿⣿⣷⣔⠄⢻⣷⣿⡄⢈⠿⠇⢸⣿⣿⣿⣿⣿⣿⣟⠛⠲⢯⣿⣒⡾⣼⣷⡹⣿⣿\n"
-				+ "⣿⣿⠵⠚⠉⢀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⢕⢕⢕⢕⢕⢕⣽⣿⣿⣿⣿⡄⢸⣿⣿⣷⣬⣽⣯⣾⣿⣿⣿⣿⣿⣿⣿⣿⡀⠄⢀⠉⠙⠛⠛⠳⠽⠿\n"
-				+ "⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿WELCOME⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢄⣹⡿⠃⠄⠄⣰⠎⡈\n"
-				+ "⢌⠻⣿⡿⡫⡪⡪⡪⡪⣺⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣭⣽⣖⣄⣴⣯⣾⢷\n"
-				+ "⠣⡁⠹⡪⡪⡪⡪⣪⣾⣿⣿⣿⣿⠋⠐⢉⢍⢄⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⠏⠈⣧⠸⣿⣿⣿⣿⣿⣿⠯⠊⠙⢻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣾\n"
-				+ "⡣⡘⢄⠙⣾⣾⣾⣿⣿⣿⣿⣿⣿⡀⢐⢕⢕⢕⢕⢕⡘⣿⣿⣿⣿⣿⣿⠏⠠⠈⣿⣦⠹⣿⣿⣿⣿⣿⠄⢀⣴⢾⣼⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣾⣿\n"
-				+ "⠌⢊⢂⢣⠹⣿⣿⣿⣿⣿⣿⣿⣿⣧⢐⢕⢕⢕⢕⢕⢅⣿⣿⣿⣿⡿⢋⢜⠠⠈⣿⣿⣇⢽⣿⣿⣿⡏⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⡿⣿⣛⣻⠿⣟⣼⣿⣿\n"
-				+ "⠄⠁⠕⢝⡢⠈⠻⣿⣿⣿⣿⣿⣿⣿⣷⣕⣑⣑⣑⣵⣿⣿⣿⡿⢋⢔⢕⣿⠠⠈⣿⣿⣿⡎⣷⣽⠻⣇⣿⣿⣿⡿⣟⣵⣿⣟⣽⣾⣿⣿⣿⣿⢯⣾⣿⣿⣿                                                            ");
+		System.out.println(" ___\n"
+				+ "                      \\\\ \\\n"
+				+ "                       \\\\ `\\\n"
+				+ "    ___                 \\\\  \\\n"
+				+ "   |    \\                \\\\  `\\\n"
+				+ "   |_____\\                \\    \\\n"
+				+ "   |______\\                \\    `\\\n"
+				+ "   |       \\                \\     \\\n"
+				+ "   |      __\\__---------------------------------._.\n"
+				+ " __|---~~~__o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_[][\\__\n"
+				+ "|___                         /~      )                \\__\n"
+				+ "    ~~~---..._______________/      ,/_________________/\n"
+				+ "                           /      /\n"
+				+ "                          /     ,/\n"
+				+ "                         /     /\n"
+				+ "                        /    ,/\n"
+				+ "                       /    /\n"
+				+ "                      //  ,/\n"
+				+ "                     //  /\n"
+				+ "                    // ,/\n"
+				+ "                   //_/");
+		System.out.println("                           WELCOME                            ");
 		System.out.println("--------------------------------------------------------------\n");
 		enterToContinue();
 		System.out.println("Loading information of flying objects.........................\n");
@@ -177,7 +189,47 @@ public class Driver {
 
 	// A static method that accept any array of flying objects as a parameter
 	public static void findLeastAndMostExpensiveUAV(UAV[] uav) {
-		
+		double price1, price2, price3;
+		price1 = uav[0].getPrice();
+		price2 = uav[0].getPrice();
+		price3 = uav[0].getPrice();
+		if (uav.length > 1) {
+			if (price1 > price2 && price1 > price3 && price2 > price3) {
+				System.out.println("The first UAV is the most expensive and the third UAV is the least expensive");
+				System.out.println(uav[0].toString(uav[0]));
+				System.out.println(uav[2].toString(uav[2]));
+			}
+			if (price1 > price2 && price1 > price3 && price3 > price2) {
+				System.out.println("The first UAV is the most expensive and the second UAV is the least expensive");
+				System.out.println(uav[0].toString(uav[0]));
+				System.out.println(uav[1].toString(uav[1]));
+			}
+			if (price2 > price1 && price2 > price3 && price3 > price1) {
+				System.out.println("The second UAV is the most expensive and the first UAV is the least expensive");
+				System.out.println(uav[1].toString(uav[1]));
+				System.out.println(uav[0].toString(uav[0]));
+			}
+			if (price2 > price1 && price2 > price3 && price1 > price3) {
+				System.out.println("The second UAV is the most expensive and the third UAV is the least expensive");
+				System.out.println(uav[1].toString(uav[1]));
+				System.out.println(uav[2].toString(uav[2]));
+			}
+			if (price3 > price1 && price3 > price2 && price1 > price2) {
+				System.out.println("The third UAV is the most expensive and the second UAV is the least expensive");
+				System.out.println(uav[2].toString(uav[2]));
+				System.out.println(uav[1].toString(uav[1]));
+			}
+			if (price3 > price1 && price3 > price2 && price2 > price1) {
+				System.out.println("The third UAV is the most expensive and the first UAV is the least expensive");
+				System.out.println(uav[2].toString(uav[2]));
+				System.out.println(uav[0].toString(uav[0]));
+			}
+		} else if (uav.length == 0) {
+			System.out.println("There is no objects found in the input array!");
+
+		} else if (uav.length == 1) {
+			System.out.println("There is only one objects in the array. " + uav.toString());
+		}
 	}
 
 	// generate the number of cylinder
