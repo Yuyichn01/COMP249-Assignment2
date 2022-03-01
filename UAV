@@ -56,7 +56,7 @@ public class UAV {
 
 	// toString method
 	public String toString() {
-		return ("The weight of this UAV is " + this.weight + "and the price of this UAV is " + this.price);
+		return ("The weight of this UAV is " + this.weight + " and the price of this UAV is " + this.price);
 	}
 
 	// equals method
