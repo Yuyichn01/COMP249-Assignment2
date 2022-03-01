@@ -38,8 +38,9 @@ public class Multirotor extends secondPackage.Helicopter {
 		+ super.passengerCapacity);
 	}
 	
-	//equals method
 	public boolean equals(Multirotor multirotor) {
-		return (this.equals(multirotor)&& multirotor != null);
+		return (this.Brand==multirotor.Brand && this.price==multirotor.price && this.horsepower==multirotor.horsepower
+				&& this.noOfCylinders==multirotor.noOfCylinders && this.creationYear==multirotor.creationYear
+				&& this.passengerCapacity==multirotor.passengerCapacity && this.noOfRotors==multirotor.noOfRotors);	
 	}
 }
