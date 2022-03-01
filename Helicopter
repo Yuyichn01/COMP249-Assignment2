@@ -68,6 +68,8 @@ public class Helicopter extends firstPackage.Airplane {
 	
 	//equals method
 	public boolean equals(Helicopter helicopter) {
-		return (this.equals(helicopter)&& helicopter != null);
+		return (this.Brand==helicopter.Brand && this.price==helicopter.price && this.horsepower==helicopter.horsepower
+				&& this.noOfCylinders==helicopter.noOfCylinders && this.creationYear==helicopter.creationYear
+				&& this.passengerCapacity==helicopter.passengerCapacity);
 	}
 }
