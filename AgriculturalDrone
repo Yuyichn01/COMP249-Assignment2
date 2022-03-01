@@ -61,7 +61,8 @@ public class AgriculturalDrone extends UAV {
 
 	// equals method
 	public boolean equals(AgriculturalDrone agdrone) {
-		return (this.equals(agdrone)&& agdrone != null);
+		return (this.price==agdrone.price && this.weight==agdrone.price && this.brand==agdrone.brand
+				&& this.carryCapacity==agdrone.carryCapacity);
 	}
 
 }
