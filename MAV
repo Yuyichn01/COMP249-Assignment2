@@ -60,7 +60,7 @@ public class MAV extends UAV {
 
 	// toString method
 	public String toString() {
-		return "The weight of this UAV is " + super.weight + "and the price of this UAV is " + super.price
+		return "The weight of this MAV is " + super.weight + " and the price of this MAV is " + super.price
 				+ ". The model of this MAV is " + this.model + " and the size of this MAV is " + this.size;
 	}
 
