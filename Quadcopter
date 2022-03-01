@@ -39,6 +39,8 @@ public class Quadcopter extends Helicopter {
 	
 	//equals method
 	public boolean equals(Quadcopter quadcopter) {
-		return (this.equals(quadcopter)&& quadcopter != null);
+		return (this.Brand==quadcopter.Brand && this.price==quadcopter.price && this.horsepower==quadcopter.horsepower
+				&& this.noOfCylinders==quadcopter.noOfCylinders && this.creationYear==quadcopter.creationYear
+				&& this.passengerCapacity==quadcopter.passengerCapacity && this.maxFlyingSpeed==quadcopter.maxFlyingSpeed);
 	}
 }
