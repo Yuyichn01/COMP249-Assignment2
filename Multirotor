@@ -1,3 +1,9 @@
+//----------------------------------
+//Assignment 2
+//Part 1
+//Written by: Ziyi Tu 40164574 & Yi Yu 40164162
+//Due date: 22 March 2022
+//----------------------------------
 package thirdPackage;
 
 public class Multirotor extends secondPackage.Helicopter {
