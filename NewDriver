@@ -17,7 +17,8 @@ public class NewDriver {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the copy program!");
-
+		enterToContinue();
+		
 		// an array of 21 objects from each class
 		// create an array of 3 airplanes, 3 UAVs, 3 Helicopters,
 		// 2 Quadcopters, 3 multirotors, 3 MAVs, and 3 agricultrial drones
