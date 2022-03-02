@@ -176,6 +176,7 @@ public class Driver {
 		System.out.println("The second Agricultural drone and the third Agricultural drone are " + string + "\n");
 
 		// invoke the comparing method
+		enterToContinue();
 		System.out.println("Finding the least and most expensive UAVs........................\n");
 		findLeastAndMostExpensiveUAV(uav);
 	}
@@ -471,5 +472,4 @@ public class Driver {
 		Scanner s = new Scanner(System.in);
 		s.nextLine();
 	}
-
 }
